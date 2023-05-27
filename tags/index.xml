@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Dũng Học Giỏi</title>
+    <link>https://du4ng.github.io/tags/</link>
+    <description>Recent content in Tags on Dũng Học Giỏi</description>
+    <image>
+      <title>Dũng Học Giỏi</title>
+      <url>https://du4ng.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://du4ng.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 06 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://du4ng.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>software</title>
+      <link>https://du4ng.github.io/tags/software/</link>
+      <pubDate>Sat, 06 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://du4ng.github.io/tags/software/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>https://du4ng.github.io/tags/web/</link>
+      <pubDate>Mon, 10 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://du4ng.github.io/tags/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>driving</title>
+      <link>https://du4ng.github.io/tags/driving/</link>
+      <pubDate>Sat, 17 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://du4ng.github.io/tags/driving/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>crisp</title>
+      <link>https://du4ng.github.io/tags/crisp/</link>
+      <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://du4ng.github.io/tags/crisp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ctf</title>
+      <link>https://du4ng.github.io/tags/ctf/</link>
+      <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://du4ng.github.io/tags/ctf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stego</title>
+      <link>https://du4ng.github.io/tags/stego/</link>
+      <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://du4ng.github.io/tags/stego/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
