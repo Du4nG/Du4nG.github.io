@@ -10,6 +10,7 @@
       <link>https://du4ng.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Sat, 06 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://du4ng.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>software</title>
@@ -53,15 +54,6 @@
       <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://du4ng.github.io/tags/ctf/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>stego</title>
-      <link>https://du4ng.github.io/tags/stego/</link>
-      <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://du4ng.github.io/tags/stego/</guid>
       <description></description>
     </item>
     
