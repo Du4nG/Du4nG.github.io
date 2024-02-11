@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on là mình, Dũng</title>
+    <title>Posts on mình đây, Dũng.</title>
     <link>https://du4ng.github.io/posts/</link>
-    <description>Recent content in Posts on là mình, Dũng</description>
+    <description>Recent content in Posts on mình đây, Dũng.</description>
     <image>
-      <title>là mình, Dũng</title>
+      <title>mình đây, Dũng.</title>
       <url>https://du4ng.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://du4ng.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
@@ -27,7 +27,7 @@
       <pubDate>Mon, 25 Dec 2023 00:00:00 +0000</pubDate>
       
       <guid>https://du4ng.github.io/posts/diaspora/</guid>
-      <description>ghé chơi.</description>
+      <description>has arrived.</description>
     </item>
     
     <item>
@@ -82,6 +82,15 @@
       
       <guid>https://du4ng.github.io/posts/ctf/</guid>
       <description>Thử thách hiện chưa có Writeups.</description>
+    </item>
+    
+    <item>
+      <title>Khó nhưng... dễ</title>
+      <link>https://du4ng.github.io/posts/leetcode/</link>
+      <pubDate>Fri, 23 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://du4ng.github.io/posts/leetcode/</guid>
+      <description>&amp;lt;/&amp;gt;</description>
     </item>
     
   </channel>
