@@ -3,54 +3,54 @@
 <img loading=lazy src=Fog.png alt="alt text">
 Mình thử dùng stegsolve bộ Red plane 0, Green plane 0, Blue plane 0 thì thu được 3 QR Code khác nhau, tương ứng với 3 phần của flag.</p><p>Ví dụ kênh đỏ:
 <img loading=lazy src=red_plane_0.png alt=red_plane_0></p><p>Nếu giải đúng chắc phải reverse hình qua code được cung cấp. Mình thử scan online ở vài web thì cũng không ăn thua do QR bị lẫn pixel từ kênh của hình gốc. May sao vẫn có một web scan ra được, hên vl.<br><br><br><br><br>​<a href=https://ctf.viblo.asia/puzzles/infinite-cm4ue2r7ywx><strong>Infinite</strong></a> [Crypto]</p><p><code>number.txt</code> : chứa rất nhiều số nguyên có 3 chữ số.</p><p>​Số nguyên có 3 chữ số có vẻ sẽ là ASCII. Thêm cái hint nói nhăng nói cuội chả hiểu đéo gì, chỉ để ý đến con số 99. Hỏi con vợ thì bảo cầm lần lượt từng số đi chia lấy dư cho 99 là ra.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-python data-lang=python><span class=line><span class=cl><span class=n>message</span> <span class=o>=</span> <span class=s1>&#39;&#39;</span><span class=o>.</span><span class=n>join</span><span class=p>([</span><span class=nb>chr</span><span class=p>(</span><span class=n>num</span> <span class=o>%</span> <span class=mi>99</span><span class=p>)</span> <span class=k>for</span> <span class=n>num</span> <span class=ow>in</span> <span class=n>numbers</span><span class=p>])</span>
-</span></span></code></pre></div><p><br><br><br><br><br>​<a href=https://ctf.viblo.asia/puzzles/jefferson-jommvw8xmus><strong>Jefferson</strong></a> [Crypto]</p><p><code>secret.txt</code> : chứa 19 dòng ký tự gì đấy cùng key và vài con số.</p><p>Jefferson có nghĩa là Jefferson&rsquo;s Wheel, là một dạng mã hóa bằng cách thay đổi thứ tự của các đĩa khi stack chúng với nhau. Có thể tham khảo video ​<a href="https://www.youtube.com/watch?v=FVcSk6TYUI8"><strong>Jefferson Disk</strong></a> trên youtube rất dễ hiểu.</p><p>Rất đơn giản, tưởng tượng từng dòng là một chiếc đĩa riêng biệt, trục quay là cái cột ở giữa, chỉ cần sắp xếp chúng theo thứ tự được cung cấp trong <code>secret.txt</code>.</p><pre tabindex=0><code>                  ┌──┐                                          ┌──┐
-                  │  │                                          │  │
-                  │  │                                          │  │
-      1 PAGFZWTHRCQEBKDVLYJXUMOSNI                14 NECDSHAZVLJOI|K|MWTBXPYQRGFU
-      2 IFBVXQWOGAYRHZLKPMUSEJCTDN                 8 EAJVTQKYWHPXZ|B|IMODGLUCNFRS
-      3 APLJBGCZFDVKEOXHMNIRTWSYQU                10 VZYLTSJMXUPDW|E|GHFCQABRNKOI
-      4 GPWBNTAURQSHLZIDXKJMYFCEOV                16 EYTMPCZVSJBHN|F|QKRDUXLIAGOW
-      5 UCILSPZYXQHABTNREWJFDMOVKG                17 RTYJEPGWIBOZM|C|HVDKULSQFAXN
-      6 VKRUSDXBHPFEWLCJIQAOGTZMNY                13 GKYJPDAUBZENT|M|SQWOHRLVCXFI
-      7 UASHNVRFXZCQWMLYBDKTJPEGIO                 9 OFTQGBMWCVEJY|L|NRDUHSKIXZPA
-      8 EAJVTQKYWHPXZBIMODGLUCNFRS                19 NWVXOESHQLZBD|I|MFACJRUGPTKY
-      9 OFTQGBMWCVEJYLNRDUHSKIXZPA                18 NGOQYCERTBUZJ|I|MKFAPXLSHDVW
-     10 VZYLTSJMXUPDWEGHFCQABRNKOI                 3 APLJBGCZFDVKE|O|XHMNIRTWSYQU
-     11 OXAMNVFWQSZCKYEDRPBLGIHTJU                 4 GPWBNTAURQSHL|Z|IDXKJMYFCEOV
-     12 EAYOPURMZGSJDICQBKFNXVTHWL                 2 IFBVXQWOGAYRH|Z|LKPMUSEJCTDN
-     13 GKYJPDAUBZENTMSQWOHRLVCXFI                 6 VKRUSDXBHPFEW|L|CJIQAOGTZMNY
-     14 NECDSHAZVLJOIKMWTBXPYQRGFU                12 EAYOPURMZGSJD|I|CQBKFNXVTHWL
-     15 YTOBWHUZCKJPLDSMEIXARGQFVN                15 YTOBWHUZCKJPL|D|SMEIXARGQFVN
-     16 EYTMPCZVSJBHNFQKRDUXLIAGOW                11 OXAMNVFWQSZCK|Y|EDRPBLGIHTJU
-     17 RTYJEPGWIBOZMCHVDKULSQFAXN                 5 UCILSPZYXQHAB|T|NREWJFDMOVKG
-     18 NGOQYCERTBUZJIMKFAPXLSHDVW                 7 UASHNVRFXZCQW|M|LYBDKTJPEGIO
-     19 NWVXOESHQLZBDIMFACJRUGPTKY                 1 PAGFZWTHRCQEB|K|DVLYJXUMOSNI
-                  │  │                                          │  │
-                  │  │                                          │  │
-                  └──┘                                          └──┘
-</code></pre><p>Tác giả đã xáo trộn thứ tự của các đĩa, tuy nhiên cha nội này không xoay chiếc đĩa nào mà để im, cho nên nhìn một lúc sẽ thấy key <code>KBEFCMLIIOZZLIDYTMK</code> xuất hiện ở cột thứ 14. Nhìn thêm xíu nữa sẽ thấy flag nằm ở cột đầu tiên.</p><p>Một ví dụ ngoài lề, nếu tác giả xoay bừa mấy cái đĩa, chúng sẽ trông như bên dưới. Ta chỉ cần align lại rồi dóng qua các cột khác cho đến khi tìm được một message hợp lý:</p><pre tabindex=0><code>                                          ┌──┐
-                                          │  │
-                                          │  │
-                              UNECDSHAZVLJOI|K|MWTBXPYQRGF                              
-                              VTQKYWHPXZ|B|IMODGLUCNFRSEAJ
-                              BRNKOIVZYLTSJMXUPDW|E|GHFCQA
-                              EYTMPCZVSJBHN|F|QKRDUXLIAGOW
-                              OZM|C|HVDKULSQFAXNRTYJEPGWIB
-                              UBZENT|M|SQWOHRLVCXFIGKYJPDA
-                              NRDUHSKIXZPAOFTQGBMWCVEJY|L|
-                              ESHQLZBD|I|MFACJRUGPTKYNWVXO
-                              PXLSHDVWNGOQYCERTBUZJ|I|MKFA
-                              NIRTWSYQUAPLJBGCZFDVKE|O|XHM
-                              FCEOVGPWBNTAURQSHL|Z|IDXKJMY
-                              VXQWOGAYRH|Z|LKPMUSEJCTDNIFB
-                              YVKRUSDXBHPFEW|L|CJIQAOGTZMN
-                              THWLEAYOPURMZGSJD|I|CQBKFNXV
-                              ZCKJPL|D|SMEIXARGQFVNYTOBWHU
-                              XAMNVFWQSZCK|Y|EDRPBLGIHTJUO
-                              PZYXQHAB|T|NREWJFDMOVKGUCILS
-                              UASHNVRFXZCQW|M|LYBDKTJPEGIO
-                              |K|DVLYJXUMOSNIPAGFZWTHRCQEB
-                                          │  │
-                                          │  │
-                                          └──┘
+</span></span></code></pre></div><p><br><br><br><br><br>​<a href=https://ctf.viblo.asia/puzzles/jefferson-jommvw8xmus><strong>Jefferson</strong></a> [Crypto]</p><p><code>secret.txt</code> : chứa 19 dòng ký tự gì đấy cùng key và vài con số.</p><p>Jefferson có nghĩa là Jefferson&rsquo;s Wheel, là một dạng mã hóa bằng cách thay đổi thứ tự của các đĩa khi stack chúng với nhau. Có thể tham khảo video ​<a href="https://www.youtube.com/watch?v=FVcSk6TYUI8"><strong>Jefferson Disk</strong></a> trên youtube rất dễ hiểu.</p><p>Rất đơn giản, tưởng tượng từng dòng là một chiếc đĩa riêng biệt, trục quay là cái cột ở giữa, chỉ cần sắp xếp chúng theo thứ tự được cung cấp trong <code>secret.txt</code>.</p><pre tabindex=0><code>             ┌──┐                                 ┌──┐
+             │  │                                 │  │
+             │  │                                 │  │
+ 1 PAGFZWTHRCQEBKDVLYJXUMOSNI       14 NECDSHAZVLJOI|K|MWTBXPYQRGFU
+ 2 IFBVXQWOGAYRHZLKPMUSEJCTDN        8 EAJVTQKYWHPXZ|B|IMODGLUCNFRS
+ 3 APLJBGCZFDVKEOXHMNIRTWSYQU       10 VZYLTSJMXUPDW|E|GHFCQABRNKOI
+ 4 GPWBNTAURQSHLZIDXKJMYFCEOV       16 EYTMPCZVSJBHN|F|QKRDUXLIAGOW
+ 5 UCILSPZYXQHABTNREWJFDMOVKG       17 RTYJEPGWIBOZM|C|HVDKULSQFAXN
+ 6 VKRUSDXBHPFEWLCJIQAOGTZMNY       13 GKYJPDAUBZENT|M|SQWOHRLVCXFI
+ 7 UASHNVRFXZCQWMLYBDKTJPEGIO        9 OFTQGBMWCVEJY|L|NRDUHSKIXZPA
+ 8 EAJVTQKYWHPXZBIMODGLUCNFRS       19 NWVXOESHQLZBD|I|MFACJRUGPTKY
+ 9 OFTQGBMWCVEJYLNRDUHSKIXZPA       18 NGOQYCERTBUZJ|I|MKFAPXLSHDVW
+10 VZYLTSJMXUPDWEGHFCQABRNKOI        3 APLJBGCZFDVKE|O|XHMNIRTWSYQU
+11 OXAMNVFWQSZCKYEDRPBLGIHTJU        4 GPWBNTAURQSHL|Z|IDXKJMYFCEOV
+12 EAYOPURMZGSJDICQBKFNXVTHWL        2 IFBVXQWOGAYRH|Z|LKPMUSEJCTDN
+13 GKYJPDAUBZENTMSQWOHRLVCXFI        6 VKRUSDXBHPFEW|L|CJIQAOGTZMNY
+14 NECDSHAZVLJOIKMWTBXPYQRGFU       12 EAYOPURMZGSJD|I|CQBKFNXVTHWL
+15 YTOBWHUZCKJPLDSMEIXARGQFVN       15 YTOBWHUZCKJPL|D|SMEIXARGQFVN
+16 EYTMPCZVSJBHNFQKRDUXLIAGOW       11 OXAMNVFWQSZCK|Y|EDRPBLGIHTJU
+17 RTYJEPGWIBOZMCHVDKULSQFAXN        5 UCILSPZYXQHAB|T|NREWJFDMOVKG
+18 NGOQYCERTBUZJIMKFAPXLSHDVW        7 UASHNVRFXZCQW|M|LYBDKTJPEGIO
+19 NWVXOESHQLZBDIMFACJRUGPTKY        1 PAGFZWTHRCQEB|K|DVLYJXUMOSNI
+            │  │                                  │  │
+            │  │                                  │  │
+            └──┘                                  └──┘
+</code></pre><p>Tác giả đã xáo trộn thứ tự của các đĩa, tuy nhiên cha nội này không xoay chiếc đĩa nào mà để im, cho nên nhìn một lúc sẽ thấy key <code>KBEFCMLIIOZZLIDYTMK</code> xuất hiện ở cột thứ 14. Nhìn thêm xíu nữa sẽ thấy flag nằm ở cột đầu tiên.</p><p>Một ví dụ ngoài lề, nếu tác giả xoay bừa mấy cái đĩa, chúng sẽ trông như bên dưới. Ta chỉ cần align lại rồi dóng qua các cột khác cho đến khi tìm được một message hợp lý:</p><pre tabindex=0><code>                   ┌──┐
+                   │  │
+                   │  │
+       UNECDSHAZVLJOI|K|MWTBXPYQRGF                              
+       VTQKYWHPXZ|B|IMODGLUCNFRSEAJ
+       BRNKOIVZYLTSJMXUPDW|E|GHFCQA
+       EYTMPCZVSJBHN|F|QKRDUXLIAGOW
+       OZM|C|HVDKULSQFAXNRTYJEPGWIB
+       UBZENT|M|SQWOHRLVCXFIGKYJPDA
+       NRDUHSKIXZPAOFTQGBMWCVEJY|L|
+       ESHQLZBD|I|MFACJRUGPTKYNWVXO
+       PXLSHDVWNGOQYCERTBUZJ|I|MKFA
+       NIRTWSYQUAPLJBGCZFDVKE|O|XHM
+       FCEOVGPWBNTAURQSHL|Z|IDXKJMY
+       VXQWOGAYRH|Z|LKPMUSEJCTDNIFB
+       YVKRUSDXBHPFEW|L|CJIQAOGTZMN
+       THWLEAYOPURMZGSJD|I|CQBKFNXV
+       ZCKJPL|D|SMEIXARGQFVNYTOBWHU
+       XAMNVFWQSZCK|Y|EDRPBLGIHTJUO
+       PZYXQHAB|T|NREWJFDMOVKGUCILS
+       UASHNVRFXZCQW|M|LYBDKTJPEGIO
+       |K|DVLYJXUMOSNIPAGFZWTHRCQEB
+                   │  │
+                   │  │
+                   └──┘
 </code></pre></div><footer class=post-footer><ul class=post-tags><li><a href=https://du4ng.github.io/tags/ctf/>ctf</a></li><li><a href=https://du4ng.github.io/tags/software/>software</a></li></ul></footer></article></main><footer class=footer><span>Software Engineer | <button onclick='window.open("https://www.facebook.com/me")' style=text-decoration:underline target=_blank>who is viewing</button></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copy";function s(){t.innerHTML="copied!",setTimeout(()=>{t.innerHTML="copy"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>
